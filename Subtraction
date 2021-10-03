@@ -1,0 +1,35 @@
+#include <stdio.h>
+struct point{
+    int x;
+    int y;
+};
+typedef struct point point;
+int main()
+{
+    point A, B, P, Q;
+    printf("Enter first point on first line segment\n");
+    scanf("%d%d", &A.x, &A.y);
+    printf("Enter second point on first line segment\n");
+    scanf("%d%d", &B.x, &B.y);
+    printf("\nThe points on first line segment are:\n");
+    printf("A:(%d, %d)\tB:(%d, %d)", A.x, A.y, B.x, B.y);
+    printf("\nEnter first point on second line segment\n");
+    scanf("%d%d", &P.x, &P.y);
+    printf("Enter second point on second line segment\n");
+    scanf("%d%d", &Q.x, &Q.y);
+    printf("\nThe points on second line segment are:\n");
+    printf("P:(%d, %d)\tQ:(%d, %d)", P.x, P.y, Q.x, Q.y);
+    double s1, s2;
+    s1 = (double)(B.y - A.y) / (B.x - A.x);
+    s2 = (double)(Q.y - P.y) / (Q.x - P.x);
+    if(s1 == s2){
+        printf("\nBoth lines are parallel");
+    }
+    else if(s1 * s2 == -1){
+        printf("\nBoth lines are perpendicular");
+    }
+    else{
+        printf("\nBoth lines are neither parallel nor perpendicular");
+    }
+    return 0;
+}
