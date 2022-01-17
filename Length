@@ -1,3 +1,4 @@
+//The program below must accept a string value and print the length of the string.
 #include <stdio.h>
 
 int main()
