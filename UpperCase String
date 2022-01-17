@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    char stringvalue[100];
+    fgets(stringvalue,100,stdin);
+
+    char *ptr=stringvalue;
+
+    while(*ptr != '\0')
+    {
+        if(isupper(*ptr))
+        {
+            printf("%c",*ptr);
+        }
+        ptr++; //Points to the next character
+    } //end of while loop
+
+    return 0;
+}
